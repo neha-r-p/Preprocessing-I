@@ -62,6 +62,8 @@ html, body {
 	margin:10px auto;
 }
 
+@horizontal: 1px solid black;
+
 .rowflex {
 	display: flex;
 	justify-content: space-between;
@@ -73,6 +75,9 @@ html, body {
 	justify-content: center;
 }
 
+h2 {
+	font-size: 2.2rem;
+}
 header {
 		font-size: 1.6rem;
 	nav {
@@ -89,7 +94,9 @@ header {
 		}
 	section {
 		.rowflex();
-		
+		padding:20px 0;
+		border-bottom: @horizontal;
+		margin-bottom: 20px;
 		.tagline {
 		 .columnflex();
 		 h1{
@@ -100,9 +107,38 @@ header {
 			.rowflex();
 			width: 49%;
 		 	img {
-				height: 300px;
-			width: 100px;
+				width: 85%;
 			}
 		}
 	}
+}
+
+main {
+	font-size: 1.6rem;
+	.top {
+		.rowflex();
+		margin:20px 0;
+		border-bottom: @horizontal;
+		
+		section {
+			.rowflex();
+			justify-content: flex-start;
+			width: 48%;
+			padding:0 0 20px;
+		}
+	}
+	article {
+		section {
+			.columnflex();
+			div {
+				.rowflex();
+				span {
+					width: 32%;
+					text-align: left;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+
 }
