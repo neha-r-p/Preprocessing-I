@@ -49,10 +49,40 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	width: 80%;
+	height: 100%;
+	margin:10px auto;
 }
+
+.rowflex {
+	display: flex;
+	justify-content: space-between;
+}
+
+header {
+		
+	nav {
+		.rowflex();
+
+		a{
+			margin:10px auto;
+		}
+	}
+		a{
+		 	 text-decoration: none;
+			
+		}
+	section {
+		.rowflex();
+	}
+	.buckypic {
+	width: 30%;
+	height: 30%;
+}
+}
+

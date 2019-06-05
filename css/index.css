@@ -127,10 +127,36 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 html,
 body {
+  width: 80%;
   height: 100%;
+  margin: 10px auto;
+}
+.rowflex {
+  display: flex;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav a {
+  margin: 10px auto;
+}
+header a {
+  text-decoration: none;
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+}
+header .buckypic {
+  width: 30%;
+  height: 30%;
 }
