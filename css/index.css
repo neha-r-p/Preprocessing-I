@@ -167,7 +167,23 @@ header a {
   font-size: 1.8rem;
 }
 header section {
-  width: 48%;
   display: flex;
   justify-content: space-between;
+}
+header section .tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header section .tagline h1 {
+  font-size: 3.2rem;
+}
+header section div {
+  display: flex;
+  justify-content: space-between;
+  width: 49%;
+}
+header section div img {
+  height: 300px;
+  width: 100px;
 }
