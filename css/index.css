@@ -132,6 +132,9 @@ table {
 *::after {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   width: 80%;
@@ -142,21 +145,29 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.columnflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header {
+  font-size: 1.6rem;
+}
 header nav {
   display: flex;
   justify-content: space-between;
+  background-color: #d9b2b0;
 }
 header nav a {
   margin: 10px auto;
 }
 header a {
   text-decoration: none;
+  color: #322620;
+  font-size: 1.8rem;
 }
 header section {
+  width: 48%;
   display: flex;
   justify-content: space-between;
-}
-header .buckypic {
-  width: 30%;
-  height: 30%;
 }

@@ -53,6 +53,9 @@ table {
     box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
 html, body {
 	width: 80%;
 	height: 100%;
@@ -64,25 +67,39 @@ html, body {
 	justify-content: space-between;
 }
 
+.columnflex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 header {
-		
+		font-size: 1.6rem;
 	nav {
 		.rowflex();
-
+		background-color: #d9b2b0;
 		a{
 			margin:10px auto;
 		}
 	}
 		a{
 		 	 text-decoration: none;
-			
+			color: #322620;
+			font-size: 1.8rem;
 		}
 	section {
+		width: 48%;
 		.rowflex();
+		
+		.tagline {
+		
+		}
+		 div {
+			.rowflex();
+			width: 49%;
+		 	img {
+				height: 300px;
+			width: 100px;
+			}
+		}
 	}
-	.buckypic {
-	width: 30%;
-	height: 30%;
-}
-}
-
