@@ -68,6 +68,7 @@ html, body {
 }
 
 @horizontal: 1px solid black;
+@leftpad: 10px;
 
 .rowflex {
 	display: flex;
@@ -97,6 +98,7 @@ header {
 		@media (max-width: 500px) {
 			.columnflex();
 			margin:0 auto;
+			border-bottom: @horizontal;
 		}
 	}
 	
@@ -106,6 +108,7 @@ header {
 			font-size: 1.8rem;
 			@media (max-width: 500px) {
 				font-size: 2.0rem;
+			
 			}
 		}
 	section {
@@ -129,8 +132,7 @@ header {
 			 @media(max-width: 500px){
 				text-align: center;
 				padding-top: 20px;
-				padding-left: 10px;
-			 }
+				padding-left: @leftpad; 			 }
 
 		}
 		 div {
@@ -154,7 +156,7 @@ header {
 		margin-bottom: 2rem;
 		font-size: 2rem;
 		@media (max-width: 500px) {
-			padding-left: 10px;
+			padding-left: @leftpad; 
 		}
 	}
 
@@ -180,7 +182,7 @@ main {
 		border-bottom: @horizontal;
 		@media (max-width: 500px) {
 			.columnflex();
-			padding-left: 10px;
+			padding-left: @leftpad; 
 		}
 
 		section {
@@ -204,6 +206,9 @@ main {
 				text-indent: -2.1rem;
 				padding-left: 1.6rem;
 			}
+			li {
+				padding-left: 8px;
+			}
 		}
 	}
 	article {
@@ -212,12 +217,20 @@ main {
 			div {
 				.rowflex();
 				span {
-					width: 32%;
+					width: 20%;
 					text-align: left;
 					margin-top: 15px;
 				}
-			}
-		}
-	}
+				.grow {
+					flex-grow: 2;
+					width: 60%;
+				}
 
+				
+				}
+			}
+			@media (max-width:500px) {
+				padding-left: @leftpad; 
+			}
+	}
 }

@@ -178,6 +178,7 @@ header nav a {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    border-bottom: 1px solid black;
   }
 }
 header a {
@@ -305,6 +306,9 @@ main .top .quals ul {
   text-indent: -2.1rem;
   padding-left: 1.6rem;
 }
+main .top .quals li {
+  padding-left: 8px;
+}
 main article section {
   display: flex;
   flex-direction: column;
@@ -315,7 +319,16 @@ main article section div {
   justify-content: space-between;
 }
 main article section div span {
-  width: 32%;
+  width: 20%;
   text-align: left;
   margin-top: 15px;
+}
+main article section div .grow {
+  flex-grow: 2;
+  width: 60%;
+}
+@media (max-width: 500px) {
+  main article {
+    padding-left: 10px;
+  }
 }
