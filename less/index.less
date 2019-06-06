@@ -57,9 +57,14 @@ html {
 	font-size: 62.5%;
 }
 html, body {
-	width: 80%;
+	width: 85%;
 	height: 100%;
 	margin:10px auto;
+
+	@media (max-width: 500px) {
+		width: 100%;
+		margin:0 auto;
+	}
 }
 
 @horizontal: 1px solid black;
@@ -77,7 +82,9 @@ html, body {
 
 h2 {
 	font-size: 2.2rem;
+	padding-bottom: 15px;
 }
+
 header {
 		font-size: 1.6rem;
 	nav {
@@ -86,29 +93,81 @@ header {
 		a{
 			margin:10px auto;
 		}
+		
+		@media (max-width: 500px) {
+			.columnflex();
+			margin:0 auto;
+		}
 	}
+	
 		a{
 		 	 text-decoration: none;
 			color: #322620;
 			font-size: 1.8rem;
+			@media (max-width: 500px) {
+				font-size: 2.0rem;
+			}
 		}
 	section {
 		.rowflex();
 		padding:20px 0;
 		border-bottom: @horizontal;
 		margin-bottom: 20px;
+
+		@media (max-width: 500px){
+			.columnflex();
+			flex-direction: column-reverse;
+			align-items: center;
+			padding: 0;
+		}
 		.tagline {
 		 .columnflex();
 		 h1{
 			 font-size: 3.2rem;
-		 }
+			 margin-bottom: 20px;
+			 }
+			 @media(max-width: 500px){
+				text-align: center;
+				padding-top: 20px;
+				padding-left: 10px;
+			 }
+
 		}
 		 div {
 			.rowflex();
+			align-items: center;
 			width: 49%;
-		 	img {
-				width: 85%;
+			@media (max-width: 500px) {
+				width: 100%;
 			}
+
+
+		 	.bucky {
+				width: 100%;
+				// height: auto;
+				// margin: 20px 0;
+			}
+		}
+	}
+
+	h3 {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		@media (max-width: 500px) {
+			padding-left: 10px;
+		}
+	}
+
+	.button {
+		width: 165px;
+		padding:5px 20px;
+		border: 2px solid darkslategray;
+		text-align: center;
+		margin:0 auto;
+		border-radius: 5px;
+		background: #F6D5BA;
+		@media (max-width: 500px) {
+			padding: 5px;
 		}
 	}
 }
@@ -119,12 +178,32 @@ main {
 		.rowflex();
 		margin:20px 0;
 		border-bottom: @horizontal;
-		
+		@media (max-width: 500px) {
+			.columnflex();
+			padding-left: 10px;
+		}
+
 		section {
 			.rowflex();
 			justify-content: flex-start;
 			width: 48%;
 			padding:0 0 20px;
+			@media (max-width: 500px) {
+				width: 100%;
+			}
+		}
+
+		.quals{
+			padding-left: 10%;
+			@media (max-width: 500px) {
+				.columnflex();
+				padding-left: 0;
+			}
+			ul {
+				list-style: square inside;
+				text-indent: -2.1rem;
+				padding-left: 1.6rem;
+			}
 		}
 	}
 	article {
