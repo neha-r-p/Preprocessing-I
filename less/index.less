@@ -93,12 +93,24 @@ header {
 		background-color: #d9b2b0;
 		a{
 			margin:10px auto;
+			@media (max-width: 500px) {
+				width: 100%;
+				border-bottom: @horizontal;
+				padding-bottom: @leftpad;
+				margin-bottom: 0px;
+			}
+		
+		
+			@media (max-width:500px){
+				.columnflex();
+				text-align: center;
+			}
 		}
 		
 		@media (max-width: 500px) {
 			.columnflex();
 			margin:0 auto;
-			border-bottom: @horizontal;
+			padding-bottom: 0;
 		}
 	}
 	
@@ -217,13 +229,16 @@ main {
 			div {
 				.rowflex();
 				span {
-					width: 20%;
+					width: 17%;
 					text-align: left;
-					margin-top: 15px;
+					margin-top: 20px;
+				}
+				b {
+					font-size: 1.8rem;
 				}
 				.grow {
 					flex-grow: 2;
-					width: 60%;
+					width: 66%;
 				}
 
 				
@@ -233,4 +248,9 @@ main {
 				padding-left: @leftpad; 
 			}
 	}
+}
+
+footer {
+	text-align: center;
+	margin:20px 0;
 }
